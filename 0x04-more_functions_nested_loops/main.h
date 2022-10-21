@@ -1,6 +1,5 @@
-#ifndef "MAIN.H"
-#define "MAIN.H"
-
+#ifndef MAIN_H
+#define MAIN_H
 /*
    *File: main.h
    * Auth: peter yibaebele
@@ -21,3 +20,4 @@ void print_triangle(int size);
 void print_number(int n);
 
 #endif
+
