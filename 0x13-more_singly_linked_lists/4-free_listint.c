@@ -1,23 +1,25 @@
 #include "lists.h"
 
+#include <stdlib.h>
+
+
+
 /**
-*free_listint2 - The function that free a memory location
-*@head: the head of the linked list
-*/
+* free_listint - Frees a list.
+* @head: Address of the first node of a list.
+**/
 
 
-void free_listint2(listint_t **head)
+
+void free_listint(listint_t *head)
 {
-listint_t *tm;
-if (!head)
-return;
-while (*head)
+listint_t *tp, *tp2;
+tp = head;
+while (tp != NULL)
 {
-tm = (*head)->next;
-free(*head);
-*head = tm;
+tp2 = tp->next;
+free(tp);
+tp = tp2;
 }
-free(tm);
-free(*head);
 }
 
